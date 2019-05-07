@@ -2,14 +2,23 @@
 <html lang="en">
 
 <head>
-<!-- Matomo Tag Manager -->
+
+<!-- Matomo -->
 <script type="text/javascript">
-var _mtm = _mtm || [];
-_mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
-var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-g.type='text/javascript'; g.async=true; g.defer=true; g.src='https://wanbi.matomo.cloud/js/container_8YJCpGby.js'; s.parentNode.insertBefore(g,s);
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['requireConsent']);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://wanbi.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
 </script>
-<!-- End Matomo Tag Manager -->
+<!-- End Matomo Code -->
     <meta charset="UTF-8">
 	<meta content="Flappy Bird,game,Crappy Bird,clone,javascript,html5 game,mobile,canvas,flappy bird source" name="keywords"/>
 	<meta name="description" content="Clone of Flappy bird game in javascript using canvas 2d">
