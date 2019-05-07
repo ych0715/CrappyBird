@@ -902,6 +902,9 @@ g.type='text/javascript'; g.async=true; g.defer=true; g.src='https://wanbi.matom
 					if (result[0] !== userAccount) {
 						userAccount = result[0];
 						console.log("userAccount = " + userAccount);
+						if (userAccount !== 'undefined') {
+							_paq.push(['setUserId', userAccount]);
+						}
 					}
 				});
 			}, 100);
