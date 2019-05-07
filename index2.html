@@ -811,7 +811,7 @@
 				//var savedscore = getCookie("highscore");
 				var savedscore = await crappyBird.methods.getHighScore().call({ from: userAccount });
 
-				if(savedscore != ""){
+				if(savedscore != "" && savedscore !== 'undefined'){
 					var hs = parseInt(savedscore) || 0;
 					if(hs < FB.score.coins)
 					{
@@ -840,7 +840,6 @@
 					that.medal.src = 'medal_' + m +'.png';
 					that.replay = new Image();
 					that.replay.src = "replay.png";
-					that.highscore = 0;
 					that.highscore = await that.getHighScore() ;
 				}, 500);
 				
