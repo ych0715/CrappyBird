@@ -863,7 +863,6 @@
 		var userAccount;
 
 		window.addEventListener('load', async () => {
-			_paq.push(['requireConsent']);
 			// 检查web3是否已经注入到(Mist/MetaMask)
 			if (typeof ethereum !== 'undefined') {
 				web3js = new Web3(ethereum);
@@ -895,7 +894,6 @@
 					if (result[0] !== userAccount) {
 						userAccount = result[0];
 						console.log("userAccount = " + userAccount);
-						_paq.push(['setUserId', userAccount]);
 					}
 				});
 			}, 100);
