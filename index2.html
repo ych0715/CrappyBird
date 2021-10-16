@@ -866,7 +866,8 @@
 			// 检查web3是否已经注入到(Mist/MetaMask)
 			if (window.ethereum) {
 				web3js = new Web3(window.ethereum);
-				await window.ethereum.enable();
+				//await window.ethereum.enable();
+				const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
 				startApp();
 				//console.log("userAccount = " + userAccount);
 				FB.init();
