@@ -888,15 +888,19 @@
 		function startApp() {
 			//var crappyBirdAddress = "0x77b0AB154BC318A2Ff9F6f40Af365Ef3C4d630Fa";
 			var crappyBirdAddress = "0x1d63Be7B6FE519055Ffe6555659759754D7E607c";
-        	crappyBird = new web3js.eth.Contract(CrappyBirdABI, crappyBirdAddress);
+        		crappyBird = new web3js.eth.Contract(CrappyBirdABI, crappyBirdAddress);
 			var accountInterval = setInterval(function() {
 			  // Check if account has changed
+				userAccount = web3.currentProvider.selectedAddress;
+				console.log("userAccount = " + userAccount);
+				/*
 				web3.eth.getAccounts(function(err, result){
 					if (result[0] !== userAccount) {
 						userAccount = result[0];
 						console.log("userAccount = " + userAccount);
 					}
 				});
+				*/
 			}, 100);
 		}
 		
