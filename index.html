@@ -892,17 +892,6 @@
         		crappyBird = new web3js.eth.Contract(CrappyBirdABI, crappyBirdAddress);
 			userAccount = web3.currentProvider.selectedAddress;
 			console.log("userAccount = " + userAccount);
-			/*
-			var accountInterval = setInterval(function() {
-			  // Check if account has changed
-				web3.eth.getAccounts(function(err, result){
-					if (result[0] !== userAccount) {
-						userAccount = result[0];
-						console.log("userAccount = " + userAccount);
-					}
-				});
-			}, 100);
-			*/
 		}
 		
 	</script>
